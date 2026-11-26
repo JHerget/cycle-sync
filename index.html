@@ -1,0 +1,37 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="theme-color" content="#0b1018">
+    <title>Cycle Sync</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="https://cdn.jsdelivr.net/npm/p5@1.11.11/lib/p5.min.js"></script>
+    <script defer src="sketch.js"></script>
+  </head>
+  <body>
+    <main>
+      <header>
+        <h1>Cycle Sync<span aria-hidden="true">.</span></h1>
+        <p>Independent rhythms. A shared center.</p>
+      </header>
+      <div id="canvas-container" role="img" aria-label="Concentric arcs of different lengths rotating at different speeds"></div>
+      <section class="controls" aria-label="Animation controls">
+        <div class="control-label">
+          <label for="arc-count">Arcs</label>
+          <output id="arc-count-value" for="arc-count">3</output>
+        </div>
+        <input id="arc-count" type="range" min="1" max="10" step="1" value="3">
+        <div class="range-labels" aria-hidden="true"><span>1</span><span>10</span></div>
+        <div class="control-label speed-label">
+          <label for="speed">Speed</label>
+          <output id="speed-value" for="speed">1.0×</output>
+        </div>
+        <input id="speed" type="range" min="0" max="5" step="0.1" value="1" aria-valuetext="1.0 times normal speed">
+        <div class="range-labels" aria-hidden="true"><span>0×</span><span>5×</span></div>
+        <button id="pause" type="button" aria-pressed="false">Pause animation</button>
+      </section>
+      <p id="load-error" role="alert" hidden>p5.js could not load. Check your internet connection and reload.</p>
+    </main>
+  </body>
+</html>
